@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Intro Slider</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Organizing Rentals</string>
+    <string name="slide_1_desc">Manage your business from your mobile, all info in one single app</string>
+
+    <string name="slide_2_title">Properties</string>
+    <string name="slide_2_desc">Add, View or Updates all info about your properties</string>
+
+    <string name="slide_3_title">Financial</string>
+    <string name="slide_3_desc">Check your cash flow and grow your business</string>
+
+    <string name="slide_4_title">Worldwide Use</string>
+    <string name="slide_4_desc">Select your Unit, Time Zone and taxes for your location</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+</resources>
