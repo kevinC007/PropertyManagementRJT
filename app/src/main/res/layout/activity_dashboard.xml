@@ -7,7 +7,9 @@
     android:background="@android:color/background_light"
     tools:layout_editor_absoluteY="81dp">
 
+
     <RelativeLayout
+        android:background="@color/whiteBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -20,7 +22,7 @@
             tools:layout_editor_absoluteY="0dp">
 
             <ImageButton
-                android:id="@+id/imageButton11"
+                android:id="@+id/notificationsButton"
                 style="@style/Widget.AppCompat.ImageButton"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
@@ -32,78 +34,78 @@
                 app:srcCompat="@drawable/bell" />
 
             <ImageButton
-                android:id="@+id/imageButton12"
+                android:id="@+id/transactionsButton"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_alignStart="@+id/imageButton11"
-                android:layout_below="@+id/imageButton11"
+                android:layout_alignStart="@+id/notificationsButton"
+                android:layout_below="@+id/notificationsButton"
                 android:layout_marginTop="20dp"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/transaction" />
 
             <ImageButton
-                android:id="@+id/imageButton13"
+                android:id="@+id/tripsButton"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_alignStart="@+id/imageButton12"
-                android:layout_below="@+id/imageButton12"
+                android:layout_alignStart="@+id/transactionsButton"
+                android:layout_below="@+id/transactionsButton"
                 android:layout_marginTop="20dp"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/ic_action_name" />
 
             <ImageButton
-                android:id="@+id/imageButton14"
+                android:id="@+id/propertiesButton"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_alignTop="@+id/imageButton11"
+                android:layout_alignTop="@+id/notificationsButton"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="40dp"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/ic_action_name" />
 
             <ImageButton
-                android:id="@+id/imageButton15"
+                android:id="@+id/collectrentButton"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_alignStart="@+id/imageButton14"
-                android:layout_alignTop="@+id/imageButton12"
+                android:layout_alignStart="@+id/propertiesButton"
+                android:layout_alignTop="@+id/transactionsButton"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/currency" />
 
             <ImageButton
-                android:id="@+id/imageButton16"
+                android:id="@+id/documentsButton"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_alignStart="@+id/imageButton15"
-                android:layout_alignTop="@+id/imageButton13"
+                android:layout_alignStart="@+id/collectrentButton"
+                android:layout_alignTop="@+id/tripsButton"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/document" />
 
             <ImageButton
-                android:id="@+id/imageButton17"
+                android:id="@+id/tenantsButton"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_alignTop="@+id/imageButton14"
+                android:layout_alignTop="@+id/propertiesButton"
                 android:layout_marginStart="40dp"
-                android:layout_toEndOf="@+id/imageButton14"
+                android:layout_toEndOf="@+id/propertiesButton"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/user" />
 
             <ImageButton
-                android:id="@+id/imageButton18"
+                android:id="@+id/todoButton"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_alignStart="@+id/imageButton17"
-                android:layout_alignTop="@+id/imageButton15"
+                android:layout_alignStart="@+id/tenantsButton"
+                android:layout_alignTop="@+id/collectrentButton"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/todo" />
 
             <ImageButton
-                android:id="@+id/imageButton19"
+                android:id="@+id/vendorsButton"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_alignStart="@+id/imageButton18"
-                android:layout_alignTop="@+id/imageButton16"
+                android:layout_alignStart="@+id/todoButton"
+                android:layout_alignTop="@+id/documentsButton"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/vendors" />
         </RelativeLayout>
@@ -112,6 +114,7 @@
             android:id="@+id/pielayout"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:background="@color/dashboardBackground"
             android:layout_below="@+id/imagelayout"
             android:layout_marginTop="100dp">
 
@@ -125,6 +128,7 @@
             android:id="@+id/graphlayout"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:background="@color/dashboardBackground"
             android:layout_below="@+id/pielayout"
             android:layout_marginTop="100dp">
 
@@ -138,6 +142,7 @@
             android:id="@+id/sometext"
             android:layout_width="match_parent"
             android:layout_height="300dp"
+            android:background="@color/dashboardBackground"
             android:layout_below="@+id/graphlayout"
             android:layout_marginTop="100dp">
 
@@ -156,8 +161,5 @@
                 android:textColor="@color/colorPrimary" />
 
         </RelativeLayout>
-
-
-
     </RelativeLayout>
 </ScrollView>
