@@ -11,6 +11,7 @@
     <color name="dot_light_screen2">#419dff</color>
     <color name="dot_light_screen3">#419dff</color>
     <color name="dot_light_screen4">#419dff</color>
+    <color name="dashboardBackground">#eff3fa</color>
     <array name="array_dot_active">
         <item>@color/dot_light_screen1</item>
         <item>@color/dot_light_screen2</item>
