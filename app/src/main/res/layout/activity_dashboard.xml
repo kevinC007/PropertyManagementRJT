@@ -17,6 +17,8 @@
             android:id="@+id/imagelayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:background="@color/dashboardBackground"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp">
@@ -108,6 +110,97 @@
                 android:layout_alignTop="@+id/documentsButton"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/vendors" />
+
+            <TextView
+                android:id="@+id/alertsTv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/transactionsButton"
+                android:layout_below="@+id/notificationsButton"
+                android:text="@string/alerts"
+                android:textAlignment="center"
+                android:textColor="@color/dashboardText" />
+
+            <TextView
+                android:id="@+id/propertiesTv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/collectrentButton"
+                android:layout_below="@+id/propertiesButton"
+                android:text="@string/properties"
+                android:textAlignment="center"
+                android:textColor="@color/dashboardText" />
+
+            <TextView
+                android:id="@+id/settingsTv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/todoButton"
+                android:layout_below="@+id/tenantsButton"
+                android:text="@string/tenants"
+                android:textAlignment="center"
+                android:textColor="@color/dashboardText" />
+
+            <TextView
+                android:id="@+id/transactionsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/transactionsButton"
+                android:layout_below="@+id/transactionsButton"
+                android:text="@string/transactions"
+                android:textColor="@color/dashboardText" />
+
+            <TextView
+                android:id="@+id/collectrentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/transactionsTv"
+                android:layout_alignBottom="@+id/transactionsTv"
+                android:layout_alignStart="@+id/documentsButton"
+                android:text="@string/collect_rent"
+                android:textAlignment="center"
+                android:textColor="@color/dashboardText" />
+
+            <TextView
+                android:id="@+id/todoTv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/collectrentTv"
+                android:layout_alignBottom="@+id/collectrentTv"
+                android:layout_alignStart="@+id/vendorsButton"
+                android:text="@string/to_do"
+                android:textAlignment="center"
+                android:textColor="@color/dashboardText" />
+
+            <TextView
+                android:id="@+id/tripsTv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tripsButton"
+                android:layout_below="@+id/tripsButton"
+                android:text="@string/trips"
+                android:textAlignment="center"
+                android:textColor="@color/dashboardText" />
+
+            <TextView
+                android:id="@+id/vendorsTv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/vendorsButton"
+                android:layout_below="@+id/vendorsButton"
+                android:text="@string/vendors"
+                android:textAlignment="center"
+                android:textColor="@color/dashboardText" />
+
+            <TextView
+                android:id="@+id/documentsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/documentsButton"
+                android:layout_below="@+id/documentsButton"
+                android:text="@string/documents"
+                android:textAlignment="center"
+                android:textColor="@color/dashboardText" />
         </RelativeLayout>
 
         <RelativeLayout
