@@ -38,9 +38,11 @@ public class FragmentProperties extends Fragment {
                 FragmentAddProperty fragmentAddProperty = new FragmentAddProperty();
                 final FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_adder, fragmentAddProperty, "NewFragmentTag");
+                ft.addToBackStack("FragmentProperties");
                 ft.commit();
             }
         });
     }
+
 
 }

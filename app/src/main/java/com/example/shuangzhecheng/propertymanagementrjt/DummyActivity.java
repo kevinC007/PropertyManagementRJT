@@ -22,7 +22,7 @@ public class DummyActivity extends AppCompatActivity {
         android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         if(id==1){
             FragmentProperties fragmentProperties = new FragmentProperties();
-            fragmentTransaction.add(R.id.fragment_adder, fragmentProperties);
+            fragmentTransaction.add(R.id.fragment_adder, fragmentProperties,"FragmentProperties");
             fragmentTransaction.commit();
 
         }
