@@ -1,6 +1,7 @@
 package com.example.shuangzhecheng.propertymanagementrjt;
 
         import android.content.Context;
+        import android.content.Intent;
         import android.graphics.Color;
         import android.os.Build;
         import android.os.Bundle;
@@ -60,13 +61,16 @@ public class WelcomeActivity extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(WelcomeActivity.this, LoginActivity.class);
+                startActivity(i);
             }
         });
 
         btnsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(WelcomeActivity.this, SignupActivity.class);
+                startActivity(i);
             }
         });
     }

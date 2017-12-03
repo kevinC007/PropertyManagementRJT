@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6">
+
+    <fragment
+        android:id="@+id/fragment_signup"
+        android:name="com.example.shuangzhecheng.propertymanagementrjt.Fragment.LandlordSignUpFragment"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+    <TextView
+        android:id="@+id/login_info"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:text="Which type of account do you want sign up for"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTenantSignup"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLandLordSignup"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/textview_background_1"
+        android:gravity="center"
+        android:text="LANDLORD SIGN UP"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTenantSignup"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTenantSignup"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/textview_background_1"
+        android:gravity="center"
+        android:text="TENANT SIGN UP"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
