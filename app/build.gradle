@@ -19,7 +19,11 @@ android {
     }
 }
 
+repositories {
+    maven { url "https://jitpack.io" }
+}
 dependencies {
+    implementation 'com.android.support:support-v4:27.0.2'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -27,4 +31,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:27.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    implementation 'com.android.support:recyclerview-v7:27.0.2'
 }

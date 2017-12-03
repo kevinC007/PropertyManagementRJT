@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PropertyManagementRJT.iml" filepath="$PROJECT_DIR$/PropertyManagementRJT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PropertyManagementRJT.iml" filepath="$PROJECT_DIR$/.idea/PropertyManagementRJT.iml" />
+      <module fileurl="file://C:\Users\joel\AndroidStudioProjects\PropertyManagementRJT\PropertyManagementRJT.iml" filepath="C:\Users\joel\AndroidStudioProjects\PropertyManagementRJT\PropertyManagementRJT.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\joel\AndroidStudioProjects\PropertyManagementRJT\app\app.iml" filepath="C:\Users\joel\AndroidStudioProjects\PropertyManagementRJT\app\app.iml" />
     </modules>
   </component>
 </project>
