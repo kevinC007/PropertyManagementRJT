@@ -1,4 +1,5 @@
-package com.example.shuangzhecheng.propertymanagementrjt.Fragment;
+package com.example.shuangzhecheng.propertymanagementrjt.network;
+
 
 
 import android.os.Bundle;
@@ -11,11 +12,12 @@ import com.example.shuangzhecheng.propertymanagementrjt.R;
 
 /**
  * A simple {@link Fragment} subclass.
+ *
  */
-public class LandlordSignUpFragment extends Fragment {
+public class FragmentLoginLandLord extends Fragment {
 
 
-    public LandlordSignUpFragment() {
+    public FragmentLoginLandLord() {
         // Required empty public constructor
     }
 
@@ -24,7 +26,7 @@ public class LandlordSignUpFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_landlord_signup, container, false);
+        return inflater.inflate(R.layout.fragment_fragment_login_land_lord, container, false);
     }
 
 }

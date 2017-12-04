@@ -1,5 +1,7 @@
 package com.example.shuangzhecheng.propertymanagementrjt.Fragment;
 
+
+
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,9 +10,14 @@ import android.view.ViewGroup;
 
 import com.example.shuangzhecheng.propertymanagementrjt.R;
 
+/**
+ * A simple {@link Fragment} subclass.
+ *
+ */
+public class FragmentLoginTenant extends Fragment {
 
-public class TenantSignUpFragment extends Fragment {
-    public TenantSignUpFragment() {
+
+    public FragmentLoginTenant() {
         // Required empty public constructor
     }
 
@@ -19,7 +26,7 @@ public class TenantSignUpFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tenant_signup, container, false);
+        return inflater.inflate(R.layout.fragment_fragment_login_tenant, container, false);
     }
 
 }

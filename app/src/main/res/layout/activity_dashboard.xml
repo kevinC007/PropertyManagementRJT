@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <RelativeLayout
+        android:background="@color/whiteBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/imagelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dashboardBackground"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <ImageButton
+                android:id="@+id/notificationsButton"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="28dp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/bell" />
+
+            <ImageButton
+                android:id="@+id/transactionsButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignStart="@+id/notificationsButton"
+                android:layout_below="@+id/notificationsButton"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/transaction" />
+
+            <ImageButton
+                android:id="@+id/tripsButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignStart="@+id/transactionsButton"
+                android:layout_below="@+id/transactionsButton"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/ic_action_name" />
+
+            <ImageButton
+                android:id="@+id/propertiesButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignTop="@+id/notificationsButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="40dp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/ic_action_name" />
+
+            <ImageButton
+                android:id="@+id/collectrentButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignStart="@+id/propertiesButton"
+                android:layout_alignTop="@+id/transactionsButton"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/currency" />
+
+            <ImageButton
+                android:id="@+id/documentsButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignStart="@+id/collectrentButton"
+                android:layout_alignTop="@+id/tripsButton"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/document" />
+
+            <ImageButton
+                android:id="@+id/tenantsButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignTop="@+id/propertiesButton"
+                android:layout_marginStart="40dp"
+                android:layout_toEndOf="@+id/propertiesButton"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/user" />
+
+            <ImageButton
+                android:id="@+id/todoButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignStart="@+id/tenantsButton"
+                android:layout_alignTop="@+id/collectrentButton"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/todo" />
+
+            <ImageButton
+                android:id="@+id/vendorsButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignStart="@+id/todoButton"
+                android:layout_alignTop="@+id/documentsButton"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/vendors" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pielayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/dashboardBackground"
+            android:layout_below="@+id/imagelayout"
+            android:layout_marginTop="100dp">
+
+            <include android:id="@+id/pie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/pie_chart"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/graphlayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/dashboardBackground"
+            android:layout_below="@+id/pielayout"
+            android:layout_marginTop="100dp">
+
+            <include android:id="@+id/graph"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/graph"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sometext"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/dashboardBackground"
+            android:layout_below="@+id/graphlayout"
+            android:layout_marginTop="100dp">
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sometext">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dashboardBackground"
+                android:text="Log Out"
+                android:textColor="@color/colorPrimary" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
