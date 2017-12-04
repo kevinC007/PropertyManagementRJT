@@ -1,12 +1,11 @@
-package com.example.shuangzhecheng.propertymanagementrjt;
+package com.example.shuangzhecheng.propertymanagementrjt.net;
 
 import android.graphics.Bitmap;
 import android.util.LruCache;
 
 import com.android.volley.toolbox.ImageLoader;
-
 /**
- * Created by joel on 11/24/2017.
+ * Created by joel on 12/3/2017.
  */
 
 class LruBitmapCache extends LruCache<String, Bitmap> implements

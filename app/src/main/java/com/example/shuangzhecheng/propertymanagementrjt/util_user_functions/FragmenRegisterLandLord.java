@@ -1,4 +1,4 @@
-package com.example.shuangzhecheng.propertymanagementrjt;
+package com.example.shuangzhecheng.propertymanagementrjt.util_user_functions;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +18,8 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.example.shuangzhecheng.propertymanagementrjt.net.AppController;
+import com.example.shuangzhecheng.propertymanagementrjt.R;
 
 /**
  * Created by joel on 12/3/2017.

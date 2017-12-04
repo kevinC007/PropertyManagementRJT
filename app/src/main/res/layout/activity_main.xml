@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dashboardBackground"
-    tools:context="com.example.shuangzhecheng.propertymanagementrjt.MainActivity">
+    tools:context="com.example.shuangzhecheng.propertymanagementrjt.util_user_functions.MainActivity">
 
     <TextView
         android:id="@+id/textView2"

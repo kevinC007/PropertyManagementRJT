@@ -16,7 +16,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/buttonAddNew"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/background_light"
@@ -29,6 +29,7 @@
                 android:textSize="18sp" />
 
             <Button
+                android:id="@+id/buttonContactTenants"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/background_light"

@@ -30,7 +30,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/addressEt"
             style="@style/Widget.AppCompat.AutoCompleteTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/cityEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/background_light"
@@ -55,7 +55,7 @@
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/stateEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/background_light"
@@ -63,22 +63,23 @@
             android:hint="State"
             android:inputType="textPersonName"
             android:padding="20dp"
+            android:textColor="@android:color/background_dark"
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/editText7"
+            android:id="@+id/zipEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/background_light"
             android:ems="10"
             android:hint="Zip"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:padding="20dp"
             android:textColor="@android:color/background_dark"
             android:textColorHint="#000000" />
 
         <EditText
-            android:id="@+id/editText8"
+            android:id="@+id/countryEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/background_light"
@@ -86,6 +87,7 @@
             android:hint="Country"
             android:inputType="textPersonName"
             android:padding="20dp"
+            android:textColor="@android:color/background_dark"
             android:textColorHint="#000000" />
 
         <TextView
@@ -107,6 +109,17 @@
             android:text="Next we'd like some basic information about the property."
             android:textColor="@android:color/background_dark"
             android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/purchasePriceEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Purchase Price"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:textColorHint="#000000"
+            android:textColor="@android:color/background_dark" />
 
         <Button
             android:id="@+id/button8"
@@ -139,11 +152,12 @@
             android:textSize="16sp" />
 
         <RadioGroup
+            android:id="@+id/rg"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioButtonYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -151,7 +165,7 @@
                 android:textColor="@android:color/background_dark" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/radioButtonNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -161,7 +175,7 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/addPropertyBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

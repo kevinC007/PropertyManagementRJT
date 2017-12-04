@@ -1,4 +1,4 @@
-package com.example.shuangzhecheng.propertymanagementrjt;
+package com.example.shuangzhecheng.propertymanagementrjt.util_user_functions;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.example.shuangzhecheng.propertymanagementrjt.R;
+import com.example.shuangzhecheng.propertymanagementrjt.util_collect_rent.FragmentCollectRent;
+import com.example.shuangzhecheng.propertymanagementrjt.util_properties.FragmentProperties;
+import com.example.shuangzhecheng.propertymanagementrjt.util_tenants.FragmentTenants;
+import com.example.shuangzhecheng.propertymanagementrjt.util_todo.FragmentToDo;
+import com.example.shuangzhecheng.propertymanagementrjt.util_transactions.FragmentTransaction;
 
 public class DummyActivity extends AppCompatActivity {
 
@@ -28,7 +35,7 @@ public class DummyActivity extends AppCompatActivity {
         }
         else if(id==2){
             FragmentTenants fragmentTenants = new FragmentTenants();
-            fragmentTransaction.add(R.id.fragment_adder, fragmentTenants);
+            fragmentTransaction.add(R.id.fragment_adder, fragmentTenants,"FragmentTenants");
             fragmentTransaction.commit();
         }
         else if(id ==3){
