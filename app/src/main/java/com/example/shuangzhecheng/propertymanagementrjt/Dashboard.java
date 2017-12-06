@@ -153,9 +153,6 @@ public class Dashboard extends AppCompatActivity {
         for (int i = 0; i < yData.length; i++) {
             yEntry.add(new PieEntry(yData[i], xData[i]));
         }
-        for (int i = 0; i < xData.length; i++) {
-            xEntry.add(xData[i]);
-        }
 
 
         PieDataSet pieDataSet = new PieDataSet(yEntry, "Property values");
