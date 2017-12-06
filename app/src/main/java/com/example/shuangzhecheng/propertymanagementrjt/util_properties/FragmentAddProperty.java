@@ -106,6 +106,8 @@ private void webserviceaddproperty(String url) {
                 public void onResponse(String response) {
          Log.i("Add Property:", response);
 
+
+
                    FragmentProperties fragmentProperties = new FragmentProperties();
                     final FragmentTransaction ft = getFragmentManager().beginTransaction();
                     ft.replace(R.id.fragment_adder, fragmentProperties, "PropertiesFragmentTag");

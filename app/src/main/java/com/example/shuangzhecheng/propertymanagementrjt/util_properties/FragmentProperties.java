@@ -1,6 +1,7 @@
 package com.example.shuangzhecheng.propertymanagementrjt.util_properties;
 
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -19,6 +20,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.shuangzhecheng.propertymanagementrjt.R;
+import com.example.shuangzhecheng.propertymanagementrjt.database.database_properties.SQLp;
+import com.example.shuangzhecheng.propertymanagementrjt.model.Graphsandchart.RentDetails;
 import com.example.shuangzhecheng.propertymanagementrjt.model.properties.PropertyItem;
 import com.example.shuangzhecheng.propertymanagementrjt.net.AppController;
 
@@ -37,10 +40,14 @@ public class FragmentProperties extends Fragment {
     private static final String url = "http://rjtmobile.com/aamir/property-mgmt/property.php?";
 
     Button addproperty;
+    private SQLp SqlHelper;
+    private SQLiteDatabase db;
     private RecyclerView propertiesRecyclerView;
     private PropertiesAdapter propertiesAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<PropertyItem> propertyItemsArrayList;
+    private ArrayList<RentDetails> rentDetailsArrayList;
+    private RentDetails rentDetails;
     private PropertyItem propertyItem;
 
     @Override
@@ -50,7 +57,10 @@ public class FragmentProperties extends Fragment {
         View view = inflater.inflate(R.layout.fragment_properties, container, false);
 
         propertiesRecyclerView = (RecyclerView) view.findViewById(R.id.propertiesRecyclerView);
-        propertiesRecyclerView.setHasFixedSize(false);
+        propertiesRecyclerView.setHasFixedSize(true);
+        SqlHelper = new SQLp(getContext());
+        db = SqlHelper.getWritableDatabase();
+
 
         layoutManager = new LinearLayoutManager(getActivity());
         propertiesRecyclerView.setLayoutManager(layoutManager);
@@ -64,40 +74,55 @@ public class FragmentProperties extends Fragment {
         StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+            Log.i("MYTEST", response);
+            try {
+                JSONObject jsonObject = new JSONObject(response);
+                JSONArray property = jsonObject.getJSONArray("Property");
+                for (int i = 0; i < property.length(); i++) {
+                    JSONObject item = property.getJSONObject(i);
 
-                Log.i("MYTEST", response);
+                    final String id = item.getString("id");
+                    final String propertyaddress = item.getString("propertyaddress");
+                    final String propertycity  = item.getString("propertycity");
+                    final String propertystate = item.getString("propertystate");
+                    final String propertycountry = item.getString("propertycountry");
+                    final String propertypurchaseprice = item.getString("propertypurchaseprice");
+                    final String propertymortageinfo = item.getString("propertymortageinfo");
 
-                try {
-                    JSONObject jsonObject = new JSONObject(response);
-                    JSONArray property = jsonObject.getJSONArray("Property");
-                    for (int i = 0; i < property.length(); i++) {
-                        JSONObject item = property.getJSONObject(i);
-
-                        PropertyItem pl = new PropertyItem(
-                                item.getString("id"),
-                                item.getString("propertyaddress"),
-                                item.getString("propertycity"),
-                                item.getString("propertystate"),
-                                item.getString("propertycountry"),
-                                item.getString("propertystatus"),
-                                item.getString("propertypurchaseprice"),
-                                item.getString("propertymortageinfo"));
-                                propertyItemsArrayList.add(pl);
-                    }
-                    Log.i("MYTEST","List" +propertyItemsArrayList);
-                    propertiesAdapter = new PropertiesAdapter(getContext(), propertyItemsArrayList);
+                    propertyItem = new PropertyItem(id, propertyaddress,propertycity,propertystate,propertycountry,propertypurchaseprice,propertymortageinfo);
+                    propertyItemsArrayList.add(propertyItem);
+                    propertiesAdapter = new PropertiesAdapter(getActivity(), propertyItemsArrayList);
                     propertiesRecyclerView.setAdapter(propertiesAdapter);
+                }
+
+                propertiesAdapter.setOnItemClickListener(new PropertiesAdapter.OnRecyclerViewItemClickListener() {
+                        @Override
+                        public void onItemClick(View view, String data) {
+                            Log.i("VALUES","you clicked me?");
+                            Bundle bundle = new Bundle();
+                            for (PropertyItem p : propertyItemsArrayList) {
+                                if (p.id.equals(data)) {
+                                    bundle.putString("Address", p.propertyaddress);
+                                    bundle.putString("City", p.propertycity);
+                                    bundle.putString("State", p.propertystate);
+                                    bundle.putString("Country", p.propertycountry);
+                                    Log.i("VALUES","V" + p.propertyaddress);
+                                }
+                            }
+                        }
+                });
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
             }
         });
         AppController.getInstance().addToRequestQueue(sr);
+
     }
 //---------------------------------------------------------------------------------------------------------------------------------------
     @Override

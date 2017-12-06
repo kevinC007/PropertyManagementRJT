@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/mapView"
+
+        tools:context=".MapDisplay"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <TextView
+        android:id="@+id/addressMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/mapView"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:id="@+id/CityMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addressMap"
+        android:layout_margin="8dp"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:id="@+id/stateMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/CityMap"
+        android:layout_below="@+id/CityMap"
+        android:text="TextView"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:id="@+id/countryMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/stateMap"
+        android:layout_below="@+id/stateMap"
+        android:text="TextView"
+        android:textColor="@android:color/background_dark" />
+
+</RelativeLayout>

@@ -206,29 +206,31 @@
         <RelativeLayout
             android:id="@+id/pielayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@color/dashboardBackground"
+            android:layout_height="300dp"
             android:layout_below="@+id/imagelayout"
-            android:layout_marginTop="100dp">
+            android:layout_marginTop="100dp"
+            android:background="@color/dashboardBackground">
 
-            <include android:id="@+id/pie"
+            <include
+                android:id="@+id/pie"
+                layout="@layout/pie_chart"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                layout="@layout/pie_chart"/>
+                android:layout_height="match_parent" />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/graphlayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@color/dashboardBackground"
+            android:layout_height="300dp"
             android:layout_below="@+id/pielayout"
-            android:layout_marginTop="100dp">
+            android:layout_marginTop="100dp"
+            android:background="@color/dashboardBackground">
 
-            <include android:id="@+id/graph"
+            <include
+                android:id="@+id/graph"
+                layout="@layout/graph"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                layout="@layout/graph"/>
+                android:layout_height="match_parent" />
         </RelativeLayout>
 
         <RelativeLayout
