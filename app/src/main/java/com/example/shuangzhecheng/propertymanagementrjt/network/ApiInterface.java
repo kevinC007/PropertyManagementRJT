@@ -1,5 +1,6 @@
 package com.example.shuangzhecheng.propertymanagementrjt.network;
 
+import com.example.shuangzhecheng.propertymanagementrjt.Model.Geocode;
 import com.example.shuangzhecheng.propertymanagementrjt.Model.User;
 
 import retrofit2.Call;
@@ -13,9 +14,14 @@ import retrofit2.http.Query;
 public interface ApiInterface {
     @GET("pro_mgt_login.php")
     Call<User> login(@Query("email") String email, @Query("password") String password);
-    @GET("shop_reg.php")
-    Call<String> getRegisterResponse(@Query("name") String name,
-                                     @Query("email") String email,
-                                     @Query("mobile") String mobile,
-                                     @Query("password") String password);
+    @GET("pro_mgt_reg.php")
+    Call<String> register(@Query("email") String email,
+                                     @Query("password") String password,
+                                     @Query("account_for") String accountType);
+    @GET("pro_mgt_reg.php")
+    Call<String> registertenant(@Query("email") String email,@Query("landlord_email") String landlordemail,
+                          @Query("password") String password,
+                          @Query("account_for") String accountType);
+    @GET("/maps/api/geocode/json")
+    Call<Geocode> getlanlang(@Query("address") String address, @Query("apiKey") String apiKey);
 }

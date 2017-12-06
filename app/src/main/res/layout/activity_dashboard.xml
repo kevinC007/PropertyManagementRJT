@@ -108,26 +108,27 @@
                 android:layout_alignTop="@+id/documentsButton"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/vendors" />
+
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/pielayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@color/dashboardBackground"
-            android:layout_below="@+id/imagelayout"
-            android:layout_marginTop="100dp">
+            android:layout_height="300dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout"
+            android:background="@color/dashboardBackground">
 
-            <include android:id="@+id/pie"
+            <com.github.mikephil.charting.charts.PieChart xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/piechart"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                layout="@layout/pie_chart"/>
+                android:layout_height="match_parent" />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/graphlayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:background="@color/dashboardBackground"
             android:layout_below="@+id/pielayout"
             android:layout_marginTop="100dp">
@@ -150,7 +151,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/sometext">
+            android:layout_below="@+id/sometext"
+            android:layout_above="@+id/pielayout">
 
             <Button
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
@@ -161,5 +163,63 @@
                 android:textColor="@color/colorPrimary" />
 
         </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imagelayout">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/CustomProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/progressBar"
+                android:textSize="18dp"
+                android:text="The Register Progress for now is : " />
+
+            <TextView
+                android:id="@+id/progressPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progressBar"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/textView5"
+                android:textSize="18dp"
+                android:text="20" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progressBar"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/progressPercent"
+                android:textSize="18dp"
+                android:text="%" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/bell" />
+
+        </RelativeLayout>
+
     </RelativeLayout>
 </ScrollView>

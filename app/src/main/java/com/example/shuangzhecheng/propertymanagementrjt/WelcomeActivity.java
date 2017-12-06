@@ -61,7 +61,7 @@ public class WelcomeActivity extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent dash = new Intent(WelcomeActivity.this, Dashboard.class);
+                Intent dash = new Intent(WelcomeActivity.this, LoginActivity.class);
                 startActivity(dash);
             }
         });
@@ -69,7 +69,7 @@ public class WelcomeActivity extends AppCompatActivity {
         btnsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+                Intent intent = new Intent(WelcomeActivity.this, RegisterActivity.class);
                 startActivity(intent);
 
             }
